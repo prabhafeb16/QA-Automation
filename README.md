@@ -151,5 +151,19 @@ The test report is uploaded as a build artifact and kept for 14 days. To view it
 2. Click on a workflow run
 3. Download the `playwright-report` artifact
 
-To add the secrets in GitHub:
-> Repository → Settings → Secrets and variables → Actions → New repository secret
+### Adding GitHub Secrets
+
+The CI pipeline needs two secrets to log in to BrightHR. Add them once and the pipeline will use them on every run.
+
+**Steps:**
+
+1. Go to your repository on GitHub: [github.com/prabhafeb16/QA-Automation](https://github.com/prabhafeb16/QA-Automation)
+2. Click **Settings** → **Secrets and variables** → **Actions**
+3. Click **New repository secret** and add the following two secrets:
+
+| Secret name | Value |
+|---|---|
+| `BRIGHTHR_EMAIL` | `qaAutomationTechTask@grr.la` |
+| `BRIGHTHR_PASSWORD` | `A1234567890-` |
+
+Once added, every push to `main` will trigger the CI pipeline automatically.
